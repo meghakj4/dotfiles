@@ -1,0 +1,48 @@
+# Tinty configuration for uniform base16 & base24 theming across all tools
+
+shell = "sh -c '{}'"
+
+[[items]]
+name = "tinted-shell"
+path = "https://github.com/tinted-theming/tinted-shell"
+hook = ". %f"
+supported-systems = ["base16"]
+themes-dir = "scripts"
+
+[[items]]
+name = "tinted-foot"
+path = "https://github.com/tinted-theming/tinted-foot"
+supported-systems = ["base16", "base24"]
+themes-dir = "colors"
+
+[[items]]
+name = "tinted-vim"
+path = "https://github.com/tinted-theming/tinted-vim"
+supported-systems = ["base16"]
+themes-dir = "colors"
+
+[[items]]
+name = "tinted-tmux"
+path = "https://github.com/tinted-theming/tinted-tmux"
+supported-systems = ["base16", "base24"]
+themes-dir = "colors"
+hook = "tmux source-file ~/.tmux.conf 2>/dev/null || true"
+
+[[items]]
+name = "tinted-fzf"
+path = "https://github.com/tinted-theming/tinted-fzf"
+supported-systems = ["base16", "base24"]
+themes-dir = "fish"
+
+[[items]]
+name = "tinted-lazygit"
+path = "https://github.com/tinted-theming/tinted-lazygit"
+supported-systems = ["base16", "base24"]
+themes-dir = "themes"
+
+[[items]]
+name = "waybar"
+path = "/home/megha/.config/tinted-theming/tinty/templates/waybar"
+supported-systems = ["base16", "base24"]
+themes-dir = "colors"
+hook = "pkill -SIGUSR2 waybar 2>/dev/null || true"

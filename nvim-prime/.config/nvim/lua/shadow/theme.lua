@@ -1,38 +1,28 @@
-local default_theme = "base16-oceanicnext"
-
-local function get_tinty_theme()
-	local theme_name = vim.fn.system("tinty current &> /dev/null && tinty current")
-
-	if vim.v.shell_error ~= 0 then
-		return default_theme
+local function apply_tinty_theme()
+	local vim_artifact = vim.fn.expand("~/.local/share/tinted-theming/tinty/artifacts/tinted-vim-colors-file.vim")
+	if vim.fn.filereadable(vim_artifact) == 1 then
+		vim.cmd("source " .. vim_artifact)
 	else
-		return vim.trim(theme_name)
+		vim.cmd("colorscheme base16-gruvbox-dark-hard")
 	end
+	-- Make main UI transparent
+	vim.cmd([[
+		highlight Normal guibg=NONE ctermbg=NONE
+		highlight NormalNC guibg=NONE ctermbg=NONE
+		highlight SignColumn guibg=NONE
+		highlight VertSplit guibg=NONE
+		highlight EndOfBuffer guibg=NONE
+	]])
 end
 
 local function handle_focus_gained()
-	local new_theme_name = get_tinty_theme()
-	local current_theme_name = vim.g.colors_name
-
-	if current_theme_name ~= new_theme_name then
-		vim.cmd("colorscheme " .. new_theme_name)
-	end
+	apply_tinty_theme()
 end
 
 local function main()
 	vim.o.termguicolors = true
 	vim.g.tinted_colorspace = 256
-	local current_theme_name = get_tinty_theme()
-
-	vim.cmd("colorscheme " .. current_theme_name)
-	-- Make main UI transparent
-	vim.cmd([[
-  highlight Normal guibg=NONE ctermbg=NONE
-  highlight NormalNC guibg=NONE ctermbg=NONE
-  highlight SignColumn guibg=NONE
-  highlight VertSplit guibg=NONE
-  highlight EndOfBuffer guibg=NONE
-]])
+	apply_tinty_theme()
 
 	vim.api.nvim_create_autocmd("FocusGained", {
 		callback = handle_focus_gained,

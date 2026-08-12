@@ -23,6 +23,7 @@ fzf --fish | source
 set EDITOR nvim
 set -Ux MANPAGER "nvim +Man! -c 'set ft=man'"
 set -Ux GEMINI_API_KEY "AIzaSyDAMXwNEXucTh3glxRRn3yC8fMdSVa-B9w"
+set -Ux LAZYGIT_CONFIG_PATH "$HOME/.config/lazygit/config.yml:$HOME/.local/share/tinted-theming/tinty/artifacts/tinted-lazygit-themes-file.yml"
 fish_add_path ~/.local/bin ~/scripts
 
 # Fish git prompt
@@ -139,6 +140,15 @@ function theme
 
     tmux source-file ~/.tmux.conf 2>/dev/null
 end
+
+# Sourcing active tinty theme for shell, terminal ANSI colors & fzf
+if test -f ~/.local/share/tinted-theming/tinty/artifacts/tinted-shell-scripts-file.sh
+    sh ~/.local/share/tinted-theming/tinty/artifacts/tinted-shell-scripts-file.sh
+end
+if test -f ~/.local/share/tinted-theming/tinty/artifacts/tinted-fzf-fish-file.fish
+    source ~/.local/share/tinted-theming/tinty/artifacts/tinted-fzf-fish-file.fish
+end
+
 
 function apps
     set dirs (fd -t d -d 1 . ~/Documents/Desk/Apps | awk -F/ '{print $7}' | fzf)
