@@ -5,31 +5,32 @@
     font-size: 14px;
     font-family: "Iosevka Nerd Font", "Iosevka Nerd Font Mono", monospace;
     min-height: 20px;
+    color: @base05;
 }
 
 window#waybar {
     background: transparent;
 }
 
-.modules-center {
-    border-radius: 15px 15px 15px 15px;
+.modules-center,
+.modules-left,
+.modules-right {
+    border-radius: 15px;
     margin-top: 8px;
-    margin-left: 8px;
-    background: @bgcolor;
+    background: @base01;
+    color: @base05;
 }
 
 .modules-left {
-    border-radius: 15px 15px 15px 15px;
     margin-left: 18px;
-    margin-top: 8px;
-    background: @bgcolor;
+}
+
+.modules-center {
+    margin-left: 8px;
 }
 
 .modules-right {
-    border-radius: 15px 15px 15px 15px;
     margin-right: 18px;
-    margin-top: 8px;
-    background: @bgcolor;
 }
 
 #battery,
@@ -49,39 +50,61 @@ window#waybar {
 #clock {
     padding-left: 10px;
     padding-right: 10px;
-}
-
-#temperature.critical,
-
-#pulseaudio.muted {
-    color: #FF0000;
-    padding-top: 0;
+    color: @base05;
 }
 
 #workspaces button {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: @base05;
+    background: transparent;
+    border-radius: 8px;
 }
 
+#workspaces button.active,
+#workspaces button.focused {
+    color: @base00;
+    background: @base0D;
+    font-weight: bold;
+}
 
+#workspaces button.urgent {
+    color: @base00;
+    background: @base08;
+}
+
+#workspaces button:hover {
+    background: @base02;
+    color: @base05;
+}
 
 #clock {
-    color: black;
+    color: @base05;
+    font-weight: bold;
+}
+
+#temperature.critical,
+#pulseaudio.muted {
+    color: @base08;
+    padding-top: 0;
 }
 
 #battery.charging {
-    color: @dragonwhite;
-    background-color: #26A65B;
+    color: @base00;
+    background-color: @base0B;
+    border-radius: 8px;
 }
 
 #battery.warning:not(.charging) {
-    background-color: #ffbe61;
-    color: black;
+    background-color: @base09;
+    color: @base00;
+    border-radius: 8px;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: @dragonwhite;
+    background-color: @base08;
+    color: @base00;
+    border-radius: 8px;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -89,11 +112,10 @@ window#waybar {
     animation-direction: alternate;
 }
 
-
 @keyframes blink {
     to {
-        background-color: @dragonwhite;
-        color: #000000;
+        background-color: @base05;
+        color: @base00;
     }
 }
 
@@ -106,4 +128,5 @@ window#waybar.empty #window {
 window#waybar #window {
     border-radius: 10px;
     margin: 2px;
+    color: @base05;
 }
