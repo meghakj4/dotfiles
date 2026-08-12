@@ -283,3 +283,8 @@ hl.window_rule({
     match = { title = "^(impala)$" },
     float = true,
 })
+
+hl.window_rule({
+    match = { class = "^(foot)$" },
+    opacity = "0.85 0.80",
+})
