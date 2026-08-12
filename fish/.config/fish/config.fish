@@ -172,3 +172,8 @@ bind ctrl-shift-t 'theme cycle'
 bind up up-or-search
 bind -M insert up up-or-search
 
+# Load local private environment variables if the file exists
+if test -f ~/.config/fish/local_env.fish
+    source ~/.config/fish/local_env.fish
+end
+
