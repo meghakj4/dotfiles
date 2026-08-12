@@ -22,7 +22,6 @@ fzf --fish | source
 
 set EDITOR nvim
 set -Ux MANPAGER "nvim +Man! -c 'set ft=man'"
-set -Ux GEMINI_API_KEY "AIzaSyDAMXwNEXucTh3glxRRn3yC8fMdSVa-B9w"
 set -Ux LAZYGIT_CONFIG_PATH "$HOME/.config/lazygit/config.yml:$HOME/.local/share/tinted-theming/tinty/artifacts/tinted-lazygit-themes-file.yml"
 fish_add_path ~/.local/bin ~/scripts
 

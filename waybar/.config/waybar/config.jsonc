@@ -14,6 +14,7 @@
     // "mpd"
   ],
   "modules-right": [
+    "custom/backlight",
     "group/audio",
     "bluetooth",
     "network",
@@ -106,24 +107,14 @@
     "icon-size": 14,
     "spacing": 10
   },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "<span font='12'>{icon}</span>",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "on-scroll-down": "light -U 10",
-    "on-scroll-up": "light -A 10",
-    "smooth-scrolling-threshold": 1
+  "custom/backlight": {
+    "exec": "~/.config/waybar/scripts/brightness.py",
+    "return-type": "json",
+    "interval": 1,
+    "on-scroll-up": "~/.config/waybar/scripts/brightness.py up",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness.py down",
+    "on-click": "~/.config/waybar/scripts/brightness.py toggle",
+    "tooltip": true
   },
   "bluetooth": {
     "format-on": "󰂰",

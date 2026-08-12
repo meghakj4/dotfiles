@@ -40,6 +40,7 @@ window#waybar {
 #disk,
 #memory,
 #backlight,
+#custom-backlight,
 #cpu,
 #temperature,
 #custom-weather,
