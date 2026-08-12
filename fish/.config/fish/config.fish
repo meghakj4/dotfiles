@@ -22,6 +22,8 @@ fzf --fish | source
 
 set EDITOR nvim
 set -Ux MANPAGER "nvim +Man! -c 'set ft=man'"
+set -Ux GEMINI_API_KEY "AIzaSyDAMXwNEXucTh3glxRRn3yC8fMdSVa-B9w"
+fish_add_path ~/.local/bin ~/scripts
 
 # Fish git prompt
 set __fish_git_prompt_showuntrackedfiles 'yes'
