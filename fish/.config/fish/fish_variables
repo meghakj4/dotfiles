@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export FZF_DEFAULT_OPTS:\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x233c3836\x2cbg\x3a\x231d2021\x2cspinner\x3a\x238ec07c\x2chl\x3a\x2383a598\x20\x2d\x2dcolor\x3dfg\x3a\x23bdae93\x2cheader\x3a\x2383a598\x2cinfo\x3a\x23fabd2f\x2cpointer\x3a\x238ec07c\x20\x2d\x2dcolor\x3dmarker\x3a\x238ec07c\x2cfg\x2b\x3a\x23ebdbb2\x2cprompt\x3a\x23fabd2f\x2chl\x2b\x3a\x2383a598
+SETUVAR --export FZF_DEFAULT_OPTS:\x20\x2d\x2dcolor\x3dbg\x2b\x3a\x232a273f\x2cbg\x3a\x23232136\x2cspinner\x3a\x239ccfd8\x2chl\x3a\x23c4a7e7\x20\x2d\x2dcolor\x3dfg\x3a\x23908caa\x2cheader\x3a\x23c4a7e7\x2cinfo\x3a\x23ea9a97\x2cpointer\x3a\x239ccfd8\x20\x2d\x2dcolor\x3dmarker\x3a\x239ccfd8\x2cfg\x2b\x3a\x23e0def4\x2cprompt\x3a\x23ea9a97\x2chl\x2b\x3a\x23c4a7e7
 SETUVAR --export GEMINI_API_KEY:AIzaSyDAMXwNEXucTh3glxRRn3yC8fMdSVa\x2dB9w
 SETUVAR --export --path LAZYGIT_CONFIG_PATH:/home/megha/\x2econfig/lazygit/config\x2eyml\x1e/home/megha/\x2elocal/share/tinted\x2dtheming/tinty/artifacts/tinted\x2dlazygit\x2dthemes\x2dfile\x2eyml
 SETUVAR --export MANPAGER:nvim\x20\x2bMan\x21\x20\x2dc\x20\x27set\x20ft\x3dman\x27

@@ -150,6 +150,10 @@ if test -f ~/.local/share/tinted-theming/tinty/artifacts/tinted-fzf-fish-file.fi
 end
 
 
+function wallpaper --wraps "wallpaper-select"
+    wallpaper-select $argv
+end
+
 function apps
     set dirs (fd -t d -d 1 . ~/Documents/Desk/Apps | awk -F/ '{print $7}' | fzf)
     if test -n "$dirs"
