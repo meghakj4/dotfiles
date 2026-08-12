@@ -12,7 +12,7 @@ config.enable_kitty_keyboard = false
 -- or, changing the font size and color scheme.
 config.font_size = 22
 config.font = wezterm.font({
-    family = "IosevkaTerm Nerd Font Mono",
+    family = "Iosevka Nerd Font Mono",
 })
 
 -- Finally, return the configuration to wezterm:

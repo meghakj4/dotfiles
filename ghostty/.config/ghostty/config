@@ -1,5 +1,5 @@
 theme = "tinted-theming"
-font-family = IosevkaTerm Nerd Font Mono
+font-family = "Iosevka Nerd Font Mono"
 font-size = 22
 background-blur-radius = 20
 mouse-hide-while-typing = true

@@ -1,9 +1,10 @@
 configuration {
+    font: "Iosevka Nerd Font 12";
     icon-theme: "Papirus";
     drun-display-format: "{name}";
     display-drun: "Apps: ";
     display-window: "Windows: ";
-    terminal: "kitty";
+    terminal: "foot";
 }
 
 entry {

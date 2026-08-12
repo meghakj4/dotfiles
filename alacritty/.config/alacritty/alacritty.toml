@@ -54,7 +54,7 @@ foreground = "0xd5c4a1"
 size = 20
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Nerd Font Mono"
 style = "Regular"
 
 [[keyboard.bindings]]
