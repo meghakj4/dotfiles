@@ -9,8 +9,6 @@ return {
         "nvim-treesitter/nvim-treesitter-textobjects",
     },
     config = function()
-        require("nvim-treesitter").setup({})
-
         local parsers = {
             "vimdoc",
             "javascript",
@@ -25,7 +23,9 @@ return {
             "rust",
         }
 
-        require("nvim-treesitter").install(parsers)
+        require("nvim-treesitter").setup({
+            ensure_installed = parsers,
+        })
 
         vim.api.nvim_create_autocmd("FileType", {
             callback = function(args)
