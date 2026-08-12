@@ -1,16 +1,22 @@
-font_size 20.0
-window_padding_width 15
+font_size 14
+window_padding_width 8
 placement_strategy   center
-background_opacity 0.98
-# dynamic_background_opacity yes
-hide_window_decorations titlebar-only
-confirm_os_window_close 0
-font_family      family="JetBrainsMono Nerd Font Mono"
-bold_font        auto
+background_opacity 0.96
 mouse_hide_wait      2.0
 url_style            curly
 
-# BEGIN_KITTY_THEME
-# Kanagawa_dragon
+enable_audio_bell no
+sync_to_monitor no
+confirm_os_window_close 0
+
+
+
 include current-theme.conf
-# END_KITTY_THEME
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="JetBrainsMono NF"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS

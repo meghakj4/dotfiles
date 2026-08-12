@@ -1,5 +1,3 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export MANPAGER:nvim\x20\x2bMan\x21\x20\x2dc\x20\x27set\x20ft\x3dman\x27
-SETUVAR __fish_initialized:4300
-SETUVAR fish_user_paths:/Users/milan/\x2eopencode/bin\x1e/Users/milan/\x2eantigravity\x2dide/antigravity\x2dide/bin\x1e/Users/milan/\x2eantigravity/antigravity/bin\x1e/Users/milan/Documents/Desk/Apps/vcpkg\x1e/Users/milan/custom\x2dbin

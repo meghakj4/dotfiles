@@ -17,7 +17,6 @@ zoxide init --cmd cd fish | source
 if status is-interactive
     atuin init fish | source
 end
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 fzf --fish | source
 
@@ -124,7 +123,6 @@ function y
 end
 
 
-
 # A function to list all tinty themes and select one (or cycle)
 function theme
     if test "$argv[1]" = "cycle"
@@ -137,7 +135,6 @@ function theme
         end
     end
 
-    # kitty @ set-colors --all /Users/milan/.local/share/tinted-theming/tinty/tinted-terminal-themes-kitty-file.conf
     tmux source-file ~/.tmux.conf 2>/dev/null
 end
 
@@ -160,37 +157,3 @@ bind ctrl-shift-t 'theme cycle'
 bind up up-or-search
 bind -M insert up up-or-search
 
-
-
-# Added by Antigravity
-fish_add_path /Users/milan/.antigravity/antigravity/bin
-
-# LuaRocks 5.1 / Neovim paths
-set -gx LUA_PATH "$HOME/.luarocks/share/lua/5.1/?.lua;$HOME/.luarocks/share/lua/5.1/?/init.lua;;"
-set -gx LUA_CPATH "$HOME/.luarocks/lib/lua/5.1/?.so;;"
-
-# Add LuaRocks binaries to your PATH
-fish_add_path $HOME/.luarocks/bin
-
-
-~/.local/bin/mise activate fish | source
-
-# pnpm
-set -gx PNPM_HOME "/Users/milan/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
-
-# Added by Antigravity IDE
-fish_add_path /Users/milan/.antigravity-ide/antigravity-ide/bin
-
-# Added by Antigravity IDE
-fish_add_path /Users/milan/.antigravity-ide/antigravity-ide/bin
-
-# opencode
-fish_add_path /Users/milan/.opencode/bin
-
-
-# Added by Antigravity CLI installer
-set -gx PATH "/Users/milan/.local/bin" $PATH
